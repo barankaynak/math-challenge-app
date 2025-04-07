@@ -67,7 +67,7 @@ const Confetti = ({ active }) => {
           color: colors[Math.floor(Math.random() * colors.length)],
           rotation: Math.random() * 360, // Random rotation
           xVelocity: -2 + Math.random() * 4, // Random horizontal velocity
-          yVelocity: 2 + Math.random() * 3, // Random vertical velocity,
+          yVelocity: 2 + Math.random() * 3, // Random vertical velocity
         });
       }
       
@@ -100,7 +100,7 @@ const Confetti = ({ active }) => {
           }}
         />
       ))}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes fall {
           to {
             transform: translateY(1000%) rotate(960deg);
@@ -270,7 +270,8 @@ const MathChallenge = () => {
       {!gameStarted && <GameCircles onCircleClick={startGame} />}
       
       <div className="max-w-lg mx-auto h-full flex flex-col justify-center relative z-10">
-        <h1 className="text-3xl font-bold text-center mb-6">2nd Grade Math Challenge</h1>
+        <h1 className="text-3xl font-bold text-center mb-2">2nd Grade Math Challenge</h1>
+        <h2 className="text-xl text-center mb-6">Created by Taha Kaynak</h2>
         
         {!gameStarted && !gameOver && (
           <div className="text-center bg-white bg-opacity-80 p-6 rounded-xl">
